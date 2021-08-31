@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   CircularProgress,
   Grid,
@@ -8,26 +8,26 @@ import {
   FormControl,
   Select,
   Menu,
-} from "@material-ui/core";
-import PlaceDetails from "../PlaceDetails/PlaceDetails";
-import useStyles from "./styles";
+} from '@material-ui/core';
+import PlaceDetails from '../PlaceDetails/PlaceDetails';
+import useStyles from './styles';
 
 const List = ({ places }) => {
   const classes = useStyles();
-  const [type, setType] = useState("restaurants");
-  const [rating, setRating] = useState("");
+  const [type, setType] = useState('restaurants');
+  const [rating, setRating] = useState('');
 
   return (
     <div className={classes.container}>
-      <Typography variant="h4">
+      <Typography variant='h4'>
         Restaurants, Hotels & Attractions around you
       </Typography>
       <FormControl className={classes.formControl}>
         <InputLabel>Type</InputLabel>
         <Select value={type} onChange={(event) => setType(event.target.value)}>
-          <MenuItem value="restaurants">Restaurants</MenuItem>
-          <MenuItem value="hotels">Hotels</MenuItem>
-          <MenuItem value="attractions">Attractions</MenuItem>
+          <MenuItem value='restaurants'>Restaurants</MenuItem>
+          <MenuItem value='hotels'>Hotels</MenuItem>
+          <MenuItem value='attractions'>Attractions</MenuItem>
         </Select>
       </FormControl>
       <FormControl className={classes.formControl}>
