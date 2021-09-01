@@ -36,7 +36,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
         <Box display='flex' justifyContent='space-between'>
           <Rating size='small' value={Number(place.rating)} readOnly />
           <Typography gutterBottom variant='subtitle1'>
-            out of {place.num_reviews}
+            out of {place.num_reviews} reviews
           </Typography>
         </Box>
         <Box display='flex' justifyContent='space-between'>
