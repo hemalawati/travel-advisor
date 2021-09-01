@@ -6,8 +6,7 @@ import {
   InputLabel,
   MenuItem,
   FormControl,
-  Select,
-  Menu,
+  Select
 } from '@material-ui/core';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 import useStyles from './styles';
