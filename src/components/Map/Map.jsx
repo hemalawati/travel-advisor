@@ -3,6 +3,7 @@ import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 import useStyles from './styles';
+import mapStyles from './mapStyles';
 
 const Map = ({
   setCoordinates,
@@ -23,7 +24,7 @@ const Map = ({
         center={coordinates}
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
-        options={''}
+        options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles}}
         onChange={(event) => {
           setCoordinates({ lat: event.center.lat, lng: event.center.lng });
           setBounds({ ne: event.marginBounds.ne, sw: event.marginBounds.sw });
